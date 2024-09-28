@@ -28,60 +28,53 @@ def type_like_human(element, text, min_delay=0.05, max_delay=0.3):
 def random_date_generator():
     month = random.randint(1,12)
     day = random.randint(2,29)
-    year = random.randint(1995,2010)
-    year_index = random.randint(14,29)
+    year = random.randint(1995,2004)
+    year_index = random.randint(22,29)
     return month,day,year,year_index
 
-def generate_username():
-    adjectives = [
-        'quick', 'lazy', 'sleepy', 'noisy', 'hungry', 
-        'happy', 'sad', 'angry', 'brave', 'calm', 
-        'eager', 'fierce', 'gentle', 'kind', 'proud',
-        'clever', 'curious', 'daring', 'determined', 'dynamic',
-        'friendly', 'funny', 'graceful', 'hardworking', 'honest',
-        'imaginative', 'jovial', 'lively', 'loyal', 'mischievous',
-        'patient', 'playful', 'polite', 'resourceful', 'sincere',
-        'thoughtful', 'understanding', 'vibrant', 'witty', 'zealous',
-        'adventurous', 'ambitious', 'artistic', 'athletic', 'bold',
-        'charming', 'confident', 'considerate', 'courageous', 'diligent',
-        'enthusiastic', 'faithful', 'fearless', 'generous', 'grateful',
-        'helpful', 'hilarious', 'independent', 'inventive', 'joyful',
-        'keen', 'meticulous', 'modest', 'observant', 'optimistic',
-        'passionate', 'perceptive', 'persistent', 'reliable', 'resilient',
-        'sociable', 'spirited', 'spontaneous', 'strategic', 'studious',
-        'supportive', 'talented', 'tenacious', 'trustworthy', 'valiant',
-        'versatile', 'vivacious', 'wise', 'zany', 'zealous',
-        'radiant', 'adaptable', 'affectionate', 'amiable', 'bright'
+def generate_human_name():
+    first_names = [
+        'John', 'Emma', 'Michael', 'Sophia', 'James', 
+        'Olivia', 'Robert', 'Isabella', 'William', 'Mia', 
+        'David', 'Charlotte', 'Richard', 'Amelia', 'Joseph', 
+        'Benjamin', 'Evelyn', 'Daniel', 'Avery', 'Matthew', 
+        'Henry', 'Eleanor', 'Samuel', 'Ella', 'Christopher', 
+        'Aiden', 'Grace', 'Joshua', 'Hannah', 'Andrew',
+        'Elizabeth', 'Alexander', 'Samantha', 'Logan', 'Victoria', 
+        'Ryan', 'Lily', 'Liam', 'Aria', 'Noah',
+        'Scarlett', 'Lucas', 'Aurora', 'Mason', 'Riley',
+        'Jackson', 'Hazel', 'Elijah', 'Zoe', 'Caleb',
+        'Brooklyn', 'Isaac', 'Lucy', 'Connor', 'Ruby',
+        'Ethan', 'Stella', 'Jayden', 'Bella', 'Nathan',
+        'Violet', 'Gabriel', 'Penelope', 'Aaron', 'Paisley',
+        'Christian', 'Aurora', 'Jonathan', 'Savannah', 'Dylan',
+        'Nora', 'Zachary', 'Luna', 'Isaiah', 'Addison'
     ]
     
-    nouns = [
-    'fox', 'dog', 'cat', 'mouse', 'frog', 
-    'lion', 'tiger', 'bear', 'wolf', 'eagle', 
-    'shark', 'whale', 'panda', 'koala', 'dolphin',
-    'rabbit', 'deer', 'squirrel', 'otter', 'owl',
-    'hawk', 'falcon', 'swan', 'peacock', 'penguin',
-    'turtle', 'gecko', 'iguana', 'alligator', 'crocodile',
-    'bat', 'beaver', 'buffalo', 'camel', 'cheetah',
-    'chicken', 'chimpanzee', 'cobra', 'crab', 'crow',
-    'dinosaur', 'duck', 'elephant', 'flamingo', 'giraffe',
-    'goat', 'gorilla', 'hedgehog', 'hippopotamus', 'horse',
-    'jaguar', 'kangaroo', 'lemur', 'leopard', 'lizard',
-    'lynx', 'manatee', 'meerkat', 'moose', 'octopus',
-    'ostrich', 'otter', 'parrot', 'platypus', 'porcupine',
-    'quokka', 'raccoon', 'raven', 'reindeer', 'rhinoceros',
-    'seal', 'skunk', 'sloth', 'sparrow', 'squid',
-    'starfish', 'stork', 'swan', 'toucan', 'turkey',
-    'turtle', 'vulture', 'walrus', 'wombat', 'yak',
-    'zebra', 'anteater', 'armadillo', 'bison', 'caribou',
-    'chinchilla', 'coyote', 'dingo', 'emu', 'gazelle'
+    last_names = [
+        'Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 
+        'Garcia', 'Miller', 'Davis', 'Rodriguez', 'Martinez', 
+        'Hernandez', 'Lopez', 'Gonzalez', 'Wilson', 'Anderson', 
+        'Thomas', 'Taylor', 'Moore', 'Jackson', 'Martin', 
+        'Lee', 'Perez', 'Thompson', 'White', 'Harris', 
+        'Sanchez', 'Clark', 'Ramirez', 'Lewis', 'Robinson', 
+        'Walker', 'Young', 'Allen', 'King', 'Wright', 
+        'Scott', 'Torres', 'Nguyen', 'Hill', 'Flores', 
+        'Green', 'Adams', 'Nelson', 'Baker', 'Hall',
+        'Rivera', 'Campbell', 'Mitchell', 'Carter', 'Roberts',
+        'Gomez', 'Phillips', 'Evans', 'Turner', 'Diaz',
+        'Parker', 'Cruz', 'Edwards', 'Collins', 'Reed',
+        'Stewart', 'Morris', 'Morales', 'Murphy', 'Cook',
+        'Rogers', 'Morgan', 'Peterson', 'Cooper', 'Reed',
+        'Bailey', 'Bell', 'Gonzales', 'Fisher', 'Kelley'
     ]
     
-    adjective = random.choice(adjectives)
-    noun = random.choice(nouns)
+    first_name = random.choice(first_names)
+    last_name = random.choice(last_names)
     number = random.randint(1, 99)
     
-    username = f"{adjective}.{noun}.{number}"
-    return adjective, noun, username
+    username = f"{first_name} {last_name}"
+    return first_name, last_name, username
 
 def generate_email(length=9):
 
@@ -90,11 +83,21 @@ def generate_email(length=9):
     return username
 
 
-def generate_password(length=12):
-    characters = string.ascii_letters + string.digits + string.punctuation
-    password = ''.join(random.choice(characters) for _ in range(length))
-    password = password.replace('"','#')
-    return password
+def generate_password(length=15):
+    if length < 8 or length > 32:
+        raise ValueError("Password length must be between 8 and 32 characters.")
+    uppercase_letter = random.choice(string.ascii_uppercase)
+    lowercase_letter = random.choice(string.ascii_lowercase)
+    digit = random.choice(string.digits)
+
+    punctuation = "!@$%^&*()_-+"
+    characters = string.ascii_letters + string.digits + punctuation
+
+    remaining_length = length - 3 
+    remaining_characters = ''.join(random.choice(characters) for _ in range(remaining_length))
+    password = list(uppercase_letter + lowercase_letter + digit + remaining_characters)
+    random.shuffle(password)
+    return ''.join(password)
 
 
 

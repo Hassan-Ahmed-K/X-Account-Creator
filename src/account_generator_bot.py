@@ -2,7 +2,7 @@ import os
 import time
 import random
 import pandas as pd
-from src.humen_behaviour_function import type_like_human,human_like_delay,random_date_generator,generate_username,generate_password,scroll
+from src.humen_behaviour_function import type_like_human,human_like_delay
 from selenium import webdriver
 from selenium.webdriver.support.ui import  WebDriverWait
 from selenium.webdriver.common.by import By
@@ -46,7 +46,6 @@ def hotmail_account_creator(driver,first_name,last_name,username,password,month,
         # driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
         # driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
 
-        driver.maximize_window()
 
         driver.get("https://signup.live.com/signup")
 
