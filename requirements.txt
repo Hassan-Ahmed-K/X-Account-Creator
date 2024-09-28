@@ -1,0 +1,11 @@
+tkinter
+Pillow
+pandas
+selenium==4.17.2
+requests
+python-dotenv==1.0.1
+# The following are built-in modules and do not require installation:
+threading
+os
+
+
