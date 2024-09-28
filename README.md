@@ -59,7 +59,7 @@ To use this bot, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/X-Account-Creator-Bot.git
+   git clone https://github.com/yourusername/X-Account-Creator-Bot.git](https://github.com/Hassan-Ahmed-K/X-Account-Creator.git
    ```
 
 2. Install the required dependencies:
